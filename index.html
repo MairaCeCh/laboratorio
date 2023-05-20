@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/laboratorio.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="titulo" class="titulo">Laboratorio</h1>
+
+    <div id="contenedor1" class="contenedor">
+      <form class="form">
+        <h2 class="h2__form">Ingreso de paciente</h2>
+        <div class="form__contenedor">
+          <div class="form__column_1">
+            <div class="cada__input">
+              <label for="name">Nombre Completo</label>
+              <input
+                name="nombre"
+                id="input__nombre"
+                class="form__input"
+                type="text"
+              />
+            </div>
+
+            <div class="cada__input">
+              <label for="name">Apellido Completo</label>
+              <input
+                name="apellido"
+                id="input__apellido"
+                class="form__input"
+                type="text"
+              />
+            </div>
+
+            <div class="cada__input">
+              <label for="name">Fecha de nacimiento</label>
+              <input
+                name="fecha"
+                id="input__nacimiento"
+                class="form__input"
+                type="date"
+              />
+            </div>
+
+            <div class="cada__input">
+              <label for="name">DNI</label>
+              <input
+                name="DNI"
+                id="input__dni"
+                class="form__input"
+                type="number"
+              />
+            </div>
+          </div>
+          <div class="form__column">
+            <div class="cada__input">
+              <label for="name">Telefono</label>
+              <input
+                name="Telefono"
+                id="input__telefono"
+                class="form__input"
+                type="number"
+              />
+            </div>
+
+            <div class="cada__input">
+              <label for="name">Mail</label>
+              <input
+                name="mail"
+                id="input__telefono"
+                class="form__input"
+                type="email"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+      <button id="btn__analisis" class="btn__analisis">analisis</button>
+    </div>
+
+    <div id="contenedor_lista" class="contenedor_lista none">
+      <div id="lista__analisis" class="listado__analisis"></div>
+      <button id="btn__enviar" class="btn__enviar">Enviar</button>
+    </div>
+
+    <script src="laboratorio.js"></script>
+  </body>
+</html>
