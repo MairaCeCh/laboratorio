@@ -5,8 +5,8 @@ const lista__analisis = document.getElementById("lista__analisis");
 const btn__enviar = document.getElementById("btn__enviar");
 const form__input = document.getElementsByClassName("form__input");
 const input__nombre = document.getElementById("input__nombre");
+const input__apellido = document.getElementById("input__apellido");
 const contenedor_lista = document.getElementById("contenedor_lista");
-const img = document.getElementById("img");
 
 btnAnalisis.addEventListener("click", () => {
   desaparecer(contenedor1, contenedor_lista);
@@ -30,9 +30,12 @@ function desaparecer(caja1, caja2) {
 // let paciente = prompt("ingrese el nombre del paciente");
 
 function tituloNuevo() {
+  let apellido_paciente = input__apellido.value;
   let nombre_paciente = input__nombre.value;
-  titulo.innerText = `Selecciones los analisis para el paciente ${nombre_paciente}.`;
+  titulo.innerText = `Selecciones los analisis para el paciente ${nombre_paciente}
+    ${apellido_paciente}.`;
   console.log(nombre_paciente);
+  console.log(apellido_paciente);
 }
 
 // function tituloNuevo2() {
