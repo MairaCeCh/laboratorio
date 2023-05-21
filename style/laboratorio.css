@@ -50,20 +50,22 @@ body{
     display: flex;
     background: #E3F4F4;
     flex-direction: row;
+    align-items: center;
 }
-.form__column_1{
-    height: 270px;
-    margin: 100px;
-   
-}
+
 .form__column{
-    height: 150px;
+    height: 270px;
     margin: 100px;
    
 }
 .titulo{
     color: black;
     margin: 55px
+}
+.test{
+    background: blue;
+    width: 100px;
+    height: 100px;
 }
 
 .cada__input {

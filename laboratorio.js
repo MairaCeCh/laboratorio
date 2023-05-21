@@ -7,9 +7,14 @@ const form__input = document.getElementsByClassName("form__input");
 const input__nombre = document.getElementById("input__nombre");
 const input__apellido = document.getElementById("input__apellido");
 const contenedor_lista = document.getElementById("contenedor_lista");
+const input__nacimiento = document.getAnimations("input__nacimiento");
+const input__dni = document.getElementById("input__dni");
+const input__telefono = document.getElementById("input__telefono");
+const input__mail = document.getElementById("input__mail");
 
 btnAnalisis.addEventListener("click", () => {
   desaparecer(contenedor1, contenedor_lista);
+
   tituloNuevo();
 });
 
