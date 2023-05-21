@@ -3,13 +3,14 @@ const contenedor1 = document.getElementById("contenedor1");
 const titulo = document.getElementById("titulo");
 const lista__analisis = document.getElementById("lista__analisis");
 const btn__enviar = document.getElementById("btn__enviar");
-const form__input = document.querySelectorALL(".form__input");
-// const contenedor_lista = document.getElementById("contenedor_lista");
+const form__input = document.getElementsByClassName("form__input");
+const input__nombre = document.getElementById("input__nombre");
+const contenedor_lista = document.getElementById("contenedor_lista");
+const img = document.getElementById("img");
 
 btnAnalisis.addEventListener("click", () => {
-  desaparecer();
+  desaparecer(contenedor1, contenedor_lista);
   tituloNuevo();
-  mostrar();
 });
 
 btn__enviar.addEventListener("click", () => {
@@ -17,31 +18,26 @@ btn__enviar.addEventListener("click", () => {
   tituloNuevo2();
 });
 
-function desaparecer() {
-  contenedor1.classList.toggle("none");
-}
-
-function desaparecer2() {
-  contenedor_lista.classList.toggle("none");
+function desaparecer(caja1, caja2) {
+  caja1.classList.toggle("none");
+  caja2.classList.toggle("none");
 }
 
 // function completo(){
 //   if()
 // }
 
-// function mostrar() {
-//   document.getElementById("contenedor_lista").style.display = "block";
-// }
-
 // let paciente = prompt("ingrese el nombre del paciente");
 
 function tituloNuevo() {
-  titulo.innerText = `Selecciones los analisis para el paciente ${paciente}.`;
+  let nombre_paciente = input__nombre.value;
+  titulo.innerText = `Selecciones los analisis para el paciente ${nombre_paciente}.`;
+  console.log(nombre_paciente);
 }
 
-function tituloNuevo2() {
-  titulo.innerText = `Los analisis del paciente: ${paciente} fueron enviados.`;
-}
+// function tituloNuevo2() {
+//   titulo.innerText = `Los analisis del paciente: ${paciente} fueron enviados.`;
+// }
 const analisis = [
   {
     Nombre_Analisis: "Orina completa",
