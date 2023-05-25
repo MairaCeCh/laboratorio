@@ -133,3 +133,18 @@ body{
     height: 50px;
     cursor: pointer;
 }
+.datos_analisis{
+    width: 100px;
+    height: 100px;
+    background: firebrick;
+}.listado__analisis_final{
+    margin: 35px;
+    width: 90%;
+    height: 75%;
+    display: flex;
+    background: #E3F4F4;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+}
