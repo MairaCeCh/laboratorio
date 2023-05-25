@@ -15,7 +15,6 @@ const inputTelefono = document.getElementById("inputTelefono");
 const inputMail = document.getElementById("inputMail");
 const listadoDelPaciene = document.getElementById("listadoDelPaciene");
 const listadoDelPaciene_1 = document.getElementById("listadoDelPaciene_1");
-const texto = document.getElementById("texto");
 
 /////declaracion de variables//////
 
@@ -142,10 +141,11 @@ const analisis = [
 
 for (const item of analisis) {
   let tarjetas = document.createElement("div");
-  tarjetas.className = "analisis__item";
-  tarjetas.innerHTML = ` <input class="analisis__item valores" id="${item.id}" type="checkbox"  /> <b class="negrita"> ${item.Nombre_Analisis} </b>
+  tarjetas.className = "analisis__item valores";
+  tarjetas.id = item.id;
+  tarjetas.innerHTML = ` <div class=" valores2" id="${item.id}"  /> <b class="negrita "> ${item.Nombre_Analisis} </b>
 <p class="p" >Precio $${item.precio}</p>
-<p class="p" >Tiempo de demora ${item.tiempo} dias</p>
+<p class="p" >Tiempo de demora ${item.tiempo} dias</p></div>
 `;
 
   lista__analisis.append(tarjetas);
@@ -154,8 +154,8 @@ for (const item of analisis) {
 let variante = "";
 
 function verificacion() {
-  const checkboxs = document.querySelectorAll('input[type="checkbox"]:checked');
-  const ArrayNodeListe = [].slice.call(checkboxs);
+  const btnAnalisis = document.querySelectorAll(".valores");
+  const ArrayNodeListe = [].slice.call(btnAnalisis);
 
   //let estudios = checkboxs.forEach((item) => item.id == analisis.forEach(item) => {item.id})
   // for (const item of checkboxs) {

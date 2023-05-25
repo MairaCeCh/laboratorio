@@ -148,3 +148,10 @@ body{
     align-items: start;
     flex-wrap: wrap;
 }
+.valores{
+    background: #a8F5b4;
+    cursor: pointer;
+}
+/* .valores2{
+    background: blue;
+} */
