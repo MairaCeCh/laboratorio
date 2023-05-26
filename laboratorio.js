@@ -151,7 +151,9 @@ for (const item of analisis) {
   lista__analisis.append(tarjetas);
 }
 
-let variante = "";
+// function btnDeAnalisis
+
+// let variante = "";
 
 function verificacion() {
   const btnAnalisis = document.querySelectorAll(".valores");
