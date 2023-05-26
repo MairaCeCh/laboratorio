@@ -1,4 +1,4 @@
-////// llamar id/////
+////// llamar del dom/////
 
 const btnAnalisis = document.getElementById("btn__analisis");
 const contenedor1 = document.getElementById("contenedor1");
@@ -15,13 +15,23 @@ const inputTelefono = document.getElementById("inputTelefono");
 const inputMail = document.getElementById("inputMail");
 const listadoDelPaciene = document.getElementById("listadoDelPaciene");
 const listadoDelPaciene_1 = document.getElementById("listadoDelPaciene_1");
+const btnLaboratorio = document.getElementById("btnlaboratorio");
+const nav = document.getElementById("nav");
+// const carrousel = document.getElementById("carrousel");
+// const btnElemento = document.querySelectorAll(".analisis__item");
+// const ArrayNodeListe = [].slice.call(btnElemento);
 
 /////declaracion de variables//////
 
 ///// funciones /////
+btnLaboratorio.addEventListener("click", () => {
+  desaparecer(nav, contenedor1);
+  // carrousel.style.display = "none";
+  titulo.style.display = "block";
+});
+
 btnAnalisis.addEventListener("click", () => {
   desaparecer(contenedor1, contenedor_lista);
-
   tituloNuevo();
 });
 
@@ -32,6 +42,7 @@ btn__enviar.addEventListener("click", () => {
   agregarPacientes();
 });
 
+btnAnalisis.addEventListener("click", () => {});
 function agregarPacientes() {
   pacientesDB.push(
     new Paciente(
@@ -138,26 +149,44 @@ const analisis = [
     id: 12,
   },
 ];
+// analisis.forEach((item) => {
+//   let tarjetas = document.createElement("div");
+//   tarjetas.className = "analisis__item";
+//   tarjetas.id = item.id;
+//   tarjetas.innerHTML = ` <div class="valores" id="${item.id}"  /> <b class="negrita "> ${item.Nombre_Analisis} </b>
+// <p class="p" >Precio $${item.precio}</p>
+// <p class="p" >Tiempo de demora ${item.tiempo} dias</p></div>
+// `;
 
+//   lista__analisis.append(tarjetas);
+//   const btnElemento = document.querySelectorAll(".analisis__item");
+//   console.log(btnElemento);
+// });
+const btnElemento = document.querySelectorAll(".analisis__item");
+console.log(btnElemento);
 for (const item of analisis) {
   let tarjetas = document.createElement("div");
-  tarjetas.className = "analisis__item valores";
+  tarjetas.className = "analisis__item";
   tarjetas.id = item.id;
-  tarjetas.innerHTML = ` <div class=" valores2" id="${item.id}"  /> <b class="negrita "> ${item.Nombre_Analisis} </b>
+  tarjetas.innerHTML = ` <div class="valores" id="${item.id}"  /> <b class="negrita "> ${item.Nombre_Analisis} </b>
 <p class="p" >Precio $${item.precio}</p>
 <p class="p" >Tiempo de demora ${item.tiempo} dias</p></div>
 `;
-
+  // const btnElemento = document.querySelectorAll(".analisis__item");
   lista__analisis.append(tarjetas);
 }
+console.log(btnElemento);
 
-// function btnDeAnalisis
-
-// let variante = "";
+btnElemento.forEach((Element) => {
+  Element.addEventListener("click", () => {
+    console.log("si funciona");
+  });
+});
 
 function verificacion() {
-  const btnAnalisis = document.querySelectorAll(".valores");
-  const ArrayNodeListe = [].slice.call(btnAnalisis);
+  // function btnDeAnalisis
+
+  // let variante = "";
 
   //let estudios = checkboxs.forEach((item) => item.id == analisis.forEach(item) => {item.id})
   // for (const item of checkboxs) {
@@ -207,6 +236,7 @@ Mail: ${inputMail.value}<br>
 
 Los analisis que realiza son:${variante.Nombre_Analisis}`;
   });
+
   listadoDelPaciene_1.append(datos_analisis);
 }
 

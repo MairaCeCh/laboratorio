@@ -4,13 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style/laboratorio.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1 id="titulo" class="titulo">Laboratorio</h1>
+    <nav id="nav" class="nav">
+      <ul class="nav_ul_l">
+        <li class="nav_ul_li"><a href="">Quienes somos</a></li>
+        <li class="nav_ul_li"><a href="">Donde estamos</a></li>
+        <li class="nav_ul_li"><a href="">Contacto</a></li>
+      </ul>
 
-    <div id="contenedor1" class="contenedor">
+      <button id="btnlaboratorio" class="nav_ul_lab">Laboratorio</button>
+    </nav>
+
+    <main class="conteiner">
+      <section id="conteiner1" class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/laboratorio-analisis.jpg"
+              class="d-block w-100"
+              alt=""
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="images/laboratorio.jpg" class="d-block w-100" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/laboratorio1.jpg" class="d-block w-100" alt="" />
+          </div>
+          <div class="carousel-item">
+            <img src="images/laboratorio2.jpg" class="d-block w-100" alt="" />
+          </div>
+        </div>
+        <button class="carousel-control-prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span>Anterior</span>
+        </button>
+      </section>
+    </main>
+
+    <h1 id="titulo" class="titulo none">Laboratorio</h1>
+
+    <div id="contenedor1" class="contenedor none">
       <form class="form">
         <h2 class="h2__form">Ingreso de paciente</h2>
         <div class="form__contenedor">
