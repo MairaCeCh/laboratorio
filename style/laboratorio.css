@@ -42,6 +42,7 @@ body{
 }
 a{
     text-decoration: none;
+    color: black;
 }
 /* .carrousel{
     width: 80%;
@@ -91,6 +92,7 @@ a{
     margin: 35px;
     width: 90%;
     height: 75%;
+    font-size: 15px;
     display: flex;
     background: #E3F4F4;
     flex-direction: row;
@@ -183,6 +185,7 @@ a{
     width: 100px;
     height: 100px;
     background: firebrick;
+
 }.listado__analisis_final{
     margin: 35px;
     width: 90%;
@@ -201,7 +204,3 @@ a{
 /* .valores2{
     background: blue;
 } */
-.carousel-img{
-    display: block;
-    width: 100%;
-}

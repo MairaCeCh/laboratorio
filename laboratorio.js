@@ -17,7 +17,7 @@ const listadoDelPaciene = document.getElementById("listadoDelPaciene");
 const listadoDelPaciene_1 = document.getElementById("listadoDelPaciene_1");
 const btnLaboratorio = document.getElementById("btnlaboratorio");
 const nav = document.getElementById("nav");
-// const carrousel = document.getElementById("carrousel");
+const carrousel = document.getElementById("conteiner");
 // const btnElemento = document.querySelectorAll(".analisis__item");
 // const ArrayNodeListe = [].slice.call(btnElemento);
 
@@ -26,7 +26,7 @@ const nav = document.getElementById("nav");
 ///// funciones /////
 btnLaboratorio.addEventListener("click", () => {
   desaparecer(nav, contenedor1);
-  // carrousel.style.display = "none";
+  carrousel.style.display = "none";
   titulo.style.display = "block";
 });
 
