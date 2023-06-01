@@ -253,3 +253,23 @@ class Paciente {
 
 const pacientesDB = [];
 console.log(pacientesDB);
+
+//////
+// Obtener todos los checkboxes en la página
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+// Crear un array para almacenar los checkboxes seleccionados
+const checkboxesSeleccionados = [];
+
+// Recorrer cada checkbox
+checkboxes.checkbox;
+forEach((checkbox) => {
+  // Verificar si el checkbox está seleccionado
+  if (checkbox.checked) {
+    // Agregar el valor del checkbox al array de seleccionados
+    checkboxesSeleccionados.push(checkbox.value);
+  }
+});
+
+// Imprimir el array de checkboxes seleccionados en la consola
+console.log(checkboxesSeleccionados);
